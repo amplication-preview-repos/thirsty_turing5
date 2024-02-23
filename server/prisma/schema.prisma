@@ -6,3 +6,11 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model Container {
+  color     String?
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  title     String?
+  updatedAt DateTime @updatedAt
+}
